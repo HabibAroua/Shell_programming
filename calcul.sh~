@@ -1,7 +1,0 @@
-
-case $1
-    '+' ) echo +
-    '-' ) echo -
-    '*' ) echo *
-    '/' ) echo /
-esac

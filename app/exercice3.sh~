@@ -1,0 +1,21 @@
+if test -d $1
+then
+    if [ $# -eq 1 ]
+    then
+        for i in `ls $1`
+        do
+          echo $i
+            if [ -d $i ]
+            then
+                echo $i
+            else if [ -f $i ]
+                 then
+                     echo `ls -l $i | cut -d' ' -f3`
+                 elif [ -L  $i ]
+                 then
+                     echo `ls -l $i | cut -d' ' -f5`
+                 fi
+            fi
+        done
+    fi
+fi

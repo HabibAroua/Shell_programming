@@ -1,14 +1,11 @@
 #include <stdio.h>
-void saisir(int *n);
-void remplir(int n,int *t);
-void afficher(int n,int t[20]);
+
 int main()
 {
-    int n=10;
-    int t[20]={0};
-    saisir(&n);
-    remplir(n,&t);
-    afficher(n,&t);
+    int n;
+    int t[20];
+    remplir(&n,t);
+    afficher(n,t);
     return 0;
 }
 
@@ -23,16 +20,15 @@ void saisir(int *n)
     *n=x;
 }
 
-void remplir(int n,int *t)
+void remplir(int *n,int t[20])
 {
-     int x=0;
-     for(int i=0;i<n;i++)
+    saisir(*n);
+     printf("%d \n",*n);
+     for(int i=0;i<*n;i++)
      {
           printf("Tapez la case %d \n",i);
-          scanf ("%d", &x);
-          *t = x;
+          scanf ("%d", &t[i]);
      }
-     printf("la valeur de n est %d \n",n);
 }
 
 void afficher(int n,int t[20])

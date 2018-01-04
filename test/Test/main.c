@@ -65,4 +65,5 @@ void tri(int tab[50], int n)
 
     }while(nb==0);
     //affichierTab(tab,n);
+    //Neww
 }

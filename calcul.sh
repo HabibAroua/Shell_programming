@@ -6,3 +6,7 @@ case $2 in
     '/' ) x=`expr $1 / $3 `;;
 esac
 echo la resultat est $x
+
+# des plus +
+# lll 
+# ++
